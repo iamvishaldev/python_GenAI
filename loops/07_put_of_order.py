@@ -1,10 +1,10 @@
-flovours = ["hot water","lemon","cinamon","out of stock","Discontinued","Spiced","Mint"]
+flovours = ["hot water","out of stock","spiced","discontinued","mint"]
 
-for flovour in flovours:
-    if flovour == "out of stock":
-        continue #skip
-    if flovour == "Discontinued":
-        break # not run after this
-    print(f"Discountoinued item found : {flovour}")
+for flavour in flovours:
+    if flavour == "out of stock":
+        continue
+    if flavour == "discontinued":
+        break
+    print(f"{flavour} -->discontinued item found")
 
-    print(f"out side of loop")
+print(f"discontinued item found-->")
