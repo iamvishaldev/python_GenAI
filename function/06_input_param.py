@@ -11,4 +11,3 @@ def make_chai(tea,milk,sugar):
 make_chai("ginger","yes","") # positional
 make_chai(tea="Green",sugar="medium",milk="no milk")
 
-# **kwargs
