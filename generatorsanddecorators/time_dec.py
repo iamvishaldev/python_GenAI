@@ -49,15 +49,30 @@
     
 #     return wrapper
 
-def my_decorator(func):
-    def wrapper():
-        print("Before")
-        func()
-        print("After")
+# def my_decorator(func):
+#     def wrapper():
+#         print("Before")
+#         func()
+#         print("After")
 
-    return wrapper
+#     return wrapper
 
+# def chai():
+#     print("Ginger tea")
+
+# chai()
+
+
+def add_masala(type):
+    def decorator(func):
+        def wrapper():
+            print(f"Making {type} chai")
+            func()
+        return wrapper
+    return decorator
+
+@add_masala("strong")
 def chai():
-    print("Ginger tea")
+    print("Ginger Chai")
 
 chai()
