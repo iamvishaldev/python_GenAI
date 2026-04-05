@@ -24,10 +24,10 @@
 # s1.hello()
 # s1.getmarks()
 
-# Let's Practice
+# # Let's Practice
 
-# Create student class that takes name & marks of 3 subjects as arguments in constructor. 
-# Then create a method to print the average.
+# # Create student class that takes name & marks of 3 subjects as arguments in constructor. 
+# # Then create a method to print the average.
 
 # class Student:
 
@@ -54,24 +54,20 @@
 # sub1.name = "Rahul"
 # sub1.hello()
 
-# Mini Project
+class Chai:
+    origin = "India"
+    brand = "Indi chai patti"
 
-# 🎯 Project Goal
+c1 = Chai()
+c2 = Chai()
 
-# Build a system where you can:
+print(c1)
+print(c2)
 
-# Add students
-# Store their marks
-# Calculate average
-# Display all students
+c1.brand = "Tazahole"
 
-class Student:
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
+print(c1.origin)
+print(c2.origin)
 
-    def add_student(self):
-        print(f"add,{self.name}")
-
-obj = Student("Ramu",65)
-obj.add_student()
+print(c1.brand)
+print(c2.brand)
