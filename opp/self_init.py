@@ -43,23 +43,38 @@
 # c1.set_brand("TATA")
 # c2.set_brand("Range Rover")
 
-class Car:
-    def __init__(self,brand): #__init__ = object banate hi data set karna
-        self.brand = brand
+# class Car:
+#     def __init__(self,brand): #__init__ = object banate hi data set karna
+#         self.brand = brand
 
-c1 = Car("TATA") # Car.__init__(c1,"TATA")
-c2 = Car("Range Rover") # Car.__init__(c2,"Range Rover")
+# c1 = Car("TATA") # Car.__init__(c1,"TATA")
+# c2 = Car("Range Rover") # Car.__init__(c2,"Range Rover")
 
-print(c1.brand) 
-print(c2.brand) 
+# print(c1.brand) 
+# print(c2.brand) 
 
-class Student:
-    def __init__(self,name,age):
+# class Student:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+# s1 = Student("Vishal",27)
+# s2 = Student("Rahul",26)
+
+# print(s1.name, s1.age)
+# print(s2.name, s2.age)
+
+
+class Movie:
+    def __init__(self,name,genre,budget):
         self.name = name
-        self.age = age
+        self.genre = genre
+        self.budget = budget
 
-s1 = Student("Vishal",27)
-s2 = Student("Rahul",26)
-
-print(s1.name, s1.age)
-print(s2.name, s2.age)
+    def display(self):
+        print("Movie name =",self.name)
+        print("Movie genre =",self.genre)
+        print("Movie budget =",self.budget)
+    
+obj = Movie("Dhurandar","Good","5cr")
+obj.display()
