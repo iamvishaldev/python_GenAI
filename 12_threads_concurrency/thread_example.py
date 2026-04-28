@@ -169,28 +169,48 @@
 # task1()
 # task2()
 
-import time
+# import time
+# import threading
+
+# def task1():
+#     print("Task 1 start")
+#     time.sleep(2)
+#     print("Task 1 end")
+
+# def task2():
+#     print("Task 2 start")
+#     time.sleep(2)
+#     print("Task 2 end")
+
+# print("start")
+
+# t1 = threading.Thread(target=task1) # create a new thread (worker) that will run task1
+# t2 = threading.Thread(target=task2) # create a new thread (worker) that will run task2
+
+# t1.start() # start the thread and run task1 
+# t2.start() # start the thread and run task2
+
+# t1.join() # wait until the task finishes
+# t2.join() # wait until the task finishes
+
+# print("End")
+
 import threading
+import time
 
-def task1():
-    print("Task 1 start")
+def download_file():
+    print(threading.current_thread().name)
     time.sleep(2)
-    print("Task 1 end")
+    print(threading.current_thread().name)
 
-def task2():
-    print("Task 2 start")
-    time.sleep(2)
-    print("Task 2 end")
+thread1 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
+thread2 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
+thread3 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
 
-print("start")
+thread1.start() # start the thread and run download_file
+thread2.start() # start the thread and run download_file
+thread3.start() # start the thread and run download_file
 
-t1 = threading.Thread(target=task1) # create a new thread (worker) that will run task1
-t2 = threading.Thread(target=task2) # create a new thread (worker) that will run task2
-
-t1.start() # start the thread and run task1 
-t2.start() # start the thread and run task2
-
-t1.join() # wait until the task finishes
-t2.join() # wait until the task finishes
-
-print("End")
+thread1.join() # wait until the task finish
+thread2.join() # wait until the task finish
+thread3.join() # wait until the task finish
