@@ -195,22 +195,22 @@
 
 # print("End")
 
-import threading
-import time
+# import threading
+# import time
 
-def download_file():
-    print(threading.current_thread().name)
-    time.sleep(2)
-    print(threading.current_thread().name)
+# def download_file():
+#     print(f"1 {threading.current_thread().name}")
+#     time.sleep(2)
+#     print(f"2 {threading.current_thread().name}")
 
-thread1 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
-thread2 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
-thread3 = threading.Thread(target=download_file) # create a new thread (worker) that wil run task download_file
+# thread1 = threading.Thread(target=download_file) # create a new thread (worker) that will run task download_file
+# thread2 = threading.Thread(target=download_file) # create a new thread (worker) that will run task download_file
+# thread3 = threading.Thread(target=download_file) # create a new thread (worker) that will run task download_file
 
-thread1.start() # start the thread and run download_file
-thread2.start() # start the thread and run download_file
-thread3.start() # start the thread and run download_file
+# thread1.start() # start the thread and run download_file
+# thread2.start() # start the thread and run download_file
+# thread3.start() # start the thread and run download_file
 
-thread1.join() # wait until the task finish
-thread2.join() # wait until the task finish
-thread3.join() # wait until the task finish
+# thread1.join() # wait until the task finish
+# thread2.join() # wait until the task finish
+# thread3.join() # wait until the task finish
