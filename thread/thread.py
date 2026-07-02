@@ -105,27 +105,27 @@
 
 # Download simulation using thread
 
-from threading import Thread
-import time
+# from threading import Thread
+# import time
 
-def download_file(file_number):
-    print(f"Downloading File-{file_number}...")
-    time.sleep(1)
-    print(f"File-{file_number} download complete!")
+# def download_file(file_number):
+#     print(f"Downloading File-{file_number}...")
+#     time.sleep(1)
+#     print(f"File-{file_number} download complete!")
 
-start = time.time()
+# start = time.time()
 
-# Create multiple threads
+# # Create multiple threads
 
-threads: list[Thread] = []
-for i in range(1,6):
-    thread = Thread(target=download_file,args=(i,))
-    threads.append(thread)
-    thread.start()
+# threads: list[Thread] = []
+# for i in range(1,6):
+#     thread = Thread(target=download_file,args=(i,))
+#     threads.append(thread)
+#     thread.start()
 
-for thread in threads:
-    thread.join()
+# for thread in threads:
+#     thread.join()
 
-end = time.time()
+# end = time.time()
 
-print(f"All download finished in {end - start:.2f} seconds")
+# print(f"All download finished in {end - start:.2f} seconds")

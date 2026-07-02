@@ -1,28 +1,27 @@
-from threading import Thread
+import threading
 import time
 
-def task(name):
-    print(f"Starting task {name}")
-    time.sleep(2)
-    print(f"Completed task {name}")
+def take_orders():
+    for i in range(1,4):
+        print(f"Taking order for #{i}")
+        time.sleep(2)
 
-start = time.time()
+def brew_chai():
+    for i in range(1,4):
+        print(f"Brewing chai for #{i}")
+        time.sleep(3)
+    
+# creating threads
 
-print(f"start",start)
+order_thread = threading.Thread(target=take_orders)
 
-# Create threads
-t1 = Thread(target=task, args=("Task-1",)) # comma in the end is important
-t2 = Thread(target=task, args=("Task-2",))
+brew_thread = threading.Thread(target=brew_chai)
 
-# Start both threads
-t1.start()
-t2.start()
+order_thread.start()
 
-# Wait for both to finish
-t1.join()
-t2.join()
+brew_thread.start()
 
-end = time.time()
+order_thread.join()
+brew_thread.join()
 
-print(f"end",end)
-print(f"Total time: {end - start:.2f} second")
+print(f"All order taken")
