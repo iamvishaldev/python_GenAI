@@ -33,12 +33,30 @@ scale_flavour = 3
 powerful_flavour = base_flavour_strength ** scale_flavour
 print(f"scaled flavour strength {powerful_flavour}")
 
-# Boolean
+# Boolean (and,or,not)
 
 is_boiling = True
 
 stri_count = 5
 
+total_auction = stri_count + is_boiling # upcasting
+print(f"Total auctions: {total_auction}")
+
+water_hot = True
+tea_added = False
+
+# can_serve = water_hot and tea_added
+# can_serve = water_hot or tea_added
+
+# print(f"chai...",can_serve)
+
 # Real floating -> decimal
+import sys
+ideal_team = 95.5
+current_temp = 95.49999
+
+print(f"Ideal temp {ideal_team - current_temp}")
+
+print(sys.float_info)
 
 # complex number 2+3j
