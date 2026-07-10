@@ -32,15 +32,26 @@
 # print(next(g))
 # print(next(g))
 
-def numbers():
-    yield 1
-    yield 2
-    yield 3
+# def numbers():
+#     yield 1
+#     yield 2
+#     yield 3
 
-g = numbers()
+# g = numbers()
 
-print(next(g))
-print(next(g))
+# print(next(g))
+# print(next(g))
 
-for i in g:
-    print(i)
+# for i in g:
+#     print(i)
+
+def chai():
+    print("Making chai")
+
+    name = yield
+
+    print(f"hello {name}")
+
+g = chai()
+
+next(g)
