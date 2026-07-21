@@ -45,13 +45,42 @@
 # for i in g:
 #     print(i)
 
-def chai():
-    print("Making chai")
+# def chai():
+#     print("Making chai")
 
-    name = yield
+#     name = yield
 
-    print(f"hello {name}")
+#     print(f"hello {name}")
 
-g = chai()
+# g = chai()
 
-next(g)
+# next(g)
+
+# ///////////////////////
+
+# def chai():
+#   print("Making Masala Chai")
+#   yield "Masala"
+#   print("Making Ginger Chai")
+#   yield "Ginger"
+#   print("Done")
+
+# g = chai()
+
+# next(g)
+# next(g)
+# next(g)
+
+# Send value to generator
+
+def chai_customer():
+  print("Welcome ! What chai would you like ?")
+  chai_name = yield
+  while True:
+    print(f"Preparing : {chai_name}")
+    chai_name = yield
+
+stall = chai_customer()
+next(stall) # start the generator
+
+stall.send("Masala Chai")
