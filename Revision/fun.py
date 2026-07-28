@@ -1,53 +1,60 @@
-# def get_input():
-#     print("Getting user input")
+# def serve_chai():
+#     chai_type = "Masala"
+#     print(f"Inside function {chai_type}")
 
-# def validate_input():
-#     print("Validating the user input info")
-
-# def save_to_db():
-#     print("saved to db")
-
-# def register_user():
-#     get_input()
-#     validate_input()
-#     save_to_db()
-#     print("Registration done")
+# chai_type = "Lemon"
+# serve_chai()
+# print(f"Outside function {chai_type}")
 
 
-# register_user()
+# def update_order():
+#     chai_type="Elaichi"
+#     def kitchen():
+#         nonlocal chai_type
+#         chai_type = "kesar"
+#     kitchen()
+#     print(f"--> {chai_type}")
+# update_order()
+
+# chai_type = "Plain"
+
+# def front_desk():
+#     def kitchen():
+#         global chai_type
+#         chai_type = "Irani"
+#     kitchen()
 
 
-# def calculate_bill(cups, price_per_cup):
-#     return cups * price_per_cup
+# front_desk()
+# print(f"Final global {chai_type}")
 
-# order1 = calculate_bill(2,55)
-# order2 = calculate_bill(2,40)
+# chai = "Ginger chai"
 
-# print("order",order1)
-# print("order",order2)
+# def prepare_chai(order):
+#     print("Preparing ",order)
 
-# without lambda code
-# chai_types = ["light","kadak","ginger","kadak"]
+# prepare_chai(chai)
+# print(chai)
+# mutable list dict set
 
-# def is_kadak(chai):
-#     return chai == "kadak"
+# immutable int float str tuple
 
-# strong_chai = list(filter(is_kadak,chai_types))
+# chai_cup = 5
 
-# with lamda
+# def edit_chai(cup):
+#     cup=44
 
-# strong_chai = list(filter(lambda chai: chai == "kadak",chai_types))
+# edit_chai(chai_cup)
+# print(chai_cup)
 
-# print(f"strong chai {strong_chai}")
-
-# strong_chai = list(filter(lambda chai: chai=="kadak",chai_types))
-
-users = [
-    {"name": "Vishal", "active": True},
-    {"name": "Rahul", "active": False},
-]
+# purve vs impure
+# recursive functions
+# lambda(Anonymous function)
 
 
-isActive_User = list(filter(lambda user: user["active"],users))
+# Pure function
 
-print(f"Get the Active user {isActive_User}")
+def pure_chai(cups):
+    return cups * 10
+
+print(pure_chai(5))
