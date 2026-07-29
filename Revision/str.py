@@ -1,11 +1,13 @@
-# String : Immutable
+# () tuples
+masala_spices = ["cardamom","cloves","cinnamon"]
 
-chai_type = "Ginger"
+(s1,s2,s3) = masala_spices
+print(f"masala spices {s1} {s2} {s3}")
 
-customer_name = "Priya"
+ginger_ratio, cardamom = 2,1
+cardamom, ginger_ratio = 1,2
+print(f"ginger {ginger_ratio} car {cardamom}")
 
-print(f"Order for {customer_name} : {chai_type} please...!")
+# membership
 
-chai_desc = "Aromatic and bold"
-
-print(f"first word",len(chai_desc[0:8]))
+print(f"Is ginger in masala spices? {'ginger' in masala_spices}")
